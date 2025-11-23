@@ -1,6 +1,137 @@
-<html>
-<head><title>My Homepage</title></head>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Your Name</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background: #f5f7fa;
+            color: #333;
+        }
+
+        header {
+            background: #1e1e1e;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+            font-size: 42px;
+        }
+
+        header p {
+            font-size: 20px;
+            opacity: 0.8;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        h2 {
+            border-left: 5px solid #4e8cff;
+            padding-left: 10px;
+            margin-bottom: 15px;
+        }
+
+        .project {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+        }
+
+        .project h3 {
+            margin-top: 0;
+        }
+
+        .project a {
+            color: #4e8cff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+            background: #eee;
+            color: #555;
+        }
+    </style>
+</head>
+
 <body>
-  <h1>Hello! This is my GitHub Pages site.</h1>
+
+    <!-- 헤더 -->
+    <header>
+        <h1>Your Name</h1>
+        <p>📌 AI / Computer Vision / Autonomous Driving</p>
+        <p>Portfolio Website</p>
+    </header>
+
+    <!-- About Me -->
+    <section>
+        <h2>👋 About Me</h2>
+        <p>
+            안녕하세요! 저는 AI·컴퓨터 비전·자율주행 알고리즘에 관심이 많은 개발자입니다.
+            주로 <b>딥러닝 연구</b>와 <b>ROS 기반 자율주행 시스템 개발</b>을 진행하고 있습니다.
+        </p>
+    </section>
+
+    <!-- Skills -->
+    <section>
+        <h2>🛠 Skills</h2>
+        <ul>
+            <li>Python, C++, PyTorch, OpenCV</li>
+            <li>ROS1/ROS2, SLAM, Planning & Control</li>
+            <li>3D Reconstruction, Depth Estimation</li>
+            <li>Docker, Linux, Git</li>
+        </ul>
+    </section>
+
+    <!-- Projects -->
+    <section>
+        <h2>🚀 Projects</h2>
+
+        <div class="project">
+            <h3>📌 Monocular Depth Estimation</h3>
+            <p>Lite-Mono 기반 구조에 AdaBins 스타일을 일부 적용해 성능 향상 연구.</p>
+            <a href="https://github.com/yourname/depth-project" target="_blank">→ GitHub 보기</a>
+        </div>
+
+        <div class="project">
+            <h3>📌 Autonomous Driving Mission Control</h3>
+            <p>ROS2 기반 GPS Pure-Pursuit + Obstacle Detection + Planning 시스템 개발.</p>
+            <a href="https://github.com/yourname/autodrive" target="_blank">→ GitHub 보기</a>
+        </div>
+
+        <div class="project">
+            <h3>📌 3D Furniture Scan & Placement Tool</h3>
+            <p>Flask + ngrok + VGGT 기반 3D Reconstruction & Plane Alignment Pipeline 개발.</p>
+            <a href="https://github.com/yourname/3d-tool" target="_blank">→ GitHub 보기</a>
+        </div>
+
+    </section>
+
+    <!-- Contact -->
+    <section>
+        <h2>📩 Contact</h2>
+        <p>Email: your_email@example.com</p>
+        <p>GitHub: <a href="https://github.com/yourname" target="_blank">github.com/yourname</a></p>
+    </section>
+
+    <footer>
+        © 2025 Your Name. All rights reserved.
+    </footer>
+
 </body>
 </html>
