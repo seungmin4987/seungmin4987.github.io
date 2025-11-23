@@ -15,8 +15,19 @@
         header {
             background: #1e1e1e;
             color: white;
-            padding: 60px 20px;
+            padding: 80px 20px 60px 20px;
             text-align: center;
+            position: relative;
+        }
+
+        /* 프로필 이미지 */
+        .profile-pic {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            margin-bottom: 20px;
         }
 
         header h1 {
@@ -41,6 +52,7 @@
             margin-bottom: 15px;
         }
 
+        /* 프로젝트 카드 */
         .project {
             background: white;
             padding: 20px;
@@ -64,11 +76,11 @@
             flex: 1;
         }
 
-        .project-content h3 {
+        .project h3 {
             margin-top: 0;
         }
 
-        .project-content a {
+        .project a {
             color: #4e8cff;
             text-decoration: none;
             font-weight: bold;
@@ -88,6 +100,9 @@
 
     <!-- 헤더 -->
     <header>
+        <!-- 프로필 사진 (임시 이미지) -->
+        <img class="profile-pic" src="https://via.placeholder.com/140" alt="profile photo">
+
         <h1>Seungmin Han</h1>
         <p>📌 AI / Computer Vision / Autonomous Driving</p>
         <p>Portfolio Website</p>
@@ -98,8 +113,26 @@
         <h2>👋 About Me</h2>
         <p>
             안녕하세요! 저는 AI·컴퓨터 비전·자율주행 알고리즘을 공부하고 있는 학생입니다.
-            주로 <b>딥러닝 연구</b>와 <b>자율주행 시스템 구현</b>을 중심으로 경험을 쌓아가고 있습니다.
+            딥러닝 연구와 자율주행 시스템 구현을 중심으로 경험을 쌓아가고 있습니다.
         </p>
+    </section>
+
+    <!-- Education -->
+    <section>
+        <h2>🎓 Education</h2>
+        <ul>
+            <li><b>건국대학교(Konkuk University)</b> – 전기전자공학부 (2020~2025)</li>
+            <li><b>전공:</b> 전기전자공학 / AI·자율주행 관련 프로젝트 수행</li>
+        </ul>
+    </section>
+
+    <!-- Experience -->
+    <section>
+        <h2>💼 Experience</h2>
+        <ul>
+            <li><b>KAI 자율주행 자동차 동아리</b> – 부팀장 / 차량 판단·제어팀 리드 / 자율주행 시스템 개발</li>
+            <li><b>임베디드 소프트웨어 경진대회</b> – CCTV 기반 보행자 안전 시스템 개발</li>
+        </ul>
     </section>
 
     <!-- Skills -->
@@ -118,7 +151,7 @@
         <h2>🚀 Projects</h2>
 
         <div class="project">
-            <img src="https://via.placeholder.com/120x80" alt="Monocular Depth">
+            <img src="https://via.placeholder.com/120x80" alt="depth">
             <div class="project-content">
                 <h3>📌 Monocular Depth Estimation</h3>
                 <p>Lite-Mono 기반 구조에 AdaBins 스타일을 일부 적용해 성능 향상 연구.</p>
@@ -127,7 +160,7 @@
         </div>
 
         <div class="project">
-            <img src="https://via.placeholder.com/120x80" alt="Mission Control">
+            <img src="https://via.placeholder.com/120x80" alt="mission">
             <div class="project-content">
                 <h3>📌 Autonomous Driving Mission Control</h3>
                 <p>ROS2 기반 GPS Pure-Pursuit + Obstacle Detection + Planning 시스템 개발.</p>
@@ -136,7 +169,7 @@
         </div>
 
         <div class="project">
-            <img src="https://via.placeholder.com/120x80" alt="3D Furniture">
+            <img src="https://via.placeholder.com/120x80" alt="3d">
             <div class="project-content">
                 <h3>📌 3D Furniture Placement Tool</h3>
                 <p>Flask + ngrok + VGGT 기반 3D Reconstruction & Plane Alignment Pipeline 개발.</p>
@@ -145,16 +178,16 @@
         </div>
 
         <div class="project">
-            <img src="https://via.placeholder.com/120x80" alt="Pedestrian Tracking">
+            <img src="https://via.placeholder.com/120x80" alt="pedestrian">
             <div class="project-content">
-                <h3>📌 Pedestrian Tracking System for Safety Using CCTV</h3>
+                <h3>📌 Embedded CCTV Pedestrian Tracking & Safety System</h3>
                 <p>A CCTV-based pedestrian tracking and safety system developed for the Embedded Software Competition.</p>
                 <a href="https://github.com/seungmin4987/2024ESWContest_mobility_6027.git" target="_blank">→ GitHub 보기</a>
             </div>
         </div>
 
         <div class="project">
-            <img src="https://via.placeholder.com/120x80" alt="Anti Spoofing">
+            <img src="https://via.placeholder.com/120x80" alt="face">
             <div class="project-content">
                 <h3>📌 Anti-Spoofing Face Authentication System</h3>
                 <p>A simple real-time face authentication project without deep learning.</p>
@@ -163,26 +196,28 @@
         </div>
         
         <div class="project">
-            <img src="https://via.placeholder.com/120x80" alt="Vehicle Control">
+            <img src="https://via.placeholder.com/120x80" alt="vehicle-control">
             <div class="project-content">
                 <h3>📌 Longitudinal & Lateral Vehicle Control System</h3>
-                <p>A real-time control system that integrates throttle, brake, and steering control for autonomous driving.</p>
+                <p>A real-time vehicle controller integrating throttle, brake, and steering for autonomous driving.</p>
                 <a href="https://github.com/seungmin4987/KAI_control.git" target="_blank">→ GitHub 보기</a>
             </div>
         </div>
 
     </section>
 
+
     <!-- Awards -->
     <section>
         <h2>🏆 Awards</h2>
         <ul>
-            <li><b>우수상</b> – 임베디드 소프트웨어 경진대회 - 자동차/모빌리티 부문 (2024)</li>
-            <li><b>금상</b> – 제16회 건국대학교 창의설계경진대회 (2024)</li>
-            <li><b>우수상</b> – 대학생 창작 모빌리티 경진대회 - 자작자율차 부문 (2025)</li>
-            <li><b>노력상</b> – 국제 대학생 EV 자율주행 경진대회 - 1/5 부문 (2025)</li>
+            <li><b>우수상</b> – 임베디드 소프트웨어 경진대회 (자동차/모빌리티, 2024)</li>
+            <li><b>금상</b> – 건국대학교 창의설계경진대회 (2024)</li>
+            <li><b>우수상</b> – 대학생 창작 모빌리티 경진대회 (자작자율차, 2025)</li>
+            <li><b>노력상</b> – 국제 대학생 EV 자율주행 경진대회 (1/5 스케일, 2025)</li>
         </ul>
     </section>
+
 
     <!-- Contact -->
     <section>
