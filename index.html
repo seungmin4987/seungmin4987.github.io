@@ -31,7 +31,7 @@
 
         nav a {
             color: #ccc;
-            margin: 0 18px;
+            margin: 0 12px;
             text-decoration: none;
             font-size: 16px;
         }
@@ -43,7 +43,7 @@
         header {
             background: #1e1e1e;
             color: white;
-            padding: 120px 20px 60px 20px;
+            padding: 140px 20px 60px 20px;
             text-align: center;
         }
 
@@ -77,6 +77,7 @@
             border-left: 5px solid #4e8cff;
             padding-left: 10px;
             margin-bottom: 15px;
+            font-size: 28px;
         }
 
         /* 프로젝트 카드 */
@@ -116,6 +117,99 @@
             background: #eee;
             color: #555;
         }
+
+        /* --------------------------------------------- */
+        /* 📱 모바일 최적화 영역 */
+        /* --------------------------------------------- */
+
+        @media (max-width: 768px) {
+
+            nav a {
+                margin: 0 6px;
+                font-size: 14px;
+            }
+
+            header {
+                padding: 120px 10px 40px 10px;
+            }
+
+            header h1 {
+                font-size: 32px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            section {
+                margin: 20px auto;
+                padding: 15px;
+            }
+
+            h2 {
+                font-size: 22px;
+                border-left-width: 4px;
+            }
+
+            .project {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .project img {
+                width: 90%;
+                height: auto;
+            }
+
+            .project-content {
+                width: 100%;
+            }
+
+            .project-content h3 {
+                font-size: 20px;
+            }
+
+            .project-content p {
+                font-size: 15px;
+            }
+        }
+
+
+        /* 📱 더 작은 화면 (아이폰 SE 등) */
+        @media (max-width: 480px) {
+
+            nav a {
+                margin: 0 4px;
+                font-size: 12px;
+            }
+
+            .profile-pic {
+                width: 120px;
+                height: 120px;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            header p {
+                font-size: 14px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            .project img {
+                width: 100%;
+            }
+
+            section ul li {
+                font-size: 14px;
+            }
+        }
+
     </style>
 </head>
 
@@ -134,7 +228,7 @@
 
     <!-- 헤더 -->
     <header id="home">
-        <img class="profile-pic" src="https://via.placeholder.com/140" alt="profile photo">
+        <img class="profile-pic" src="https://via.placeholder.com/140" alt="profile">
         <h1>Seungmin Han</h1>
         <p>📌 AI / Computer Vision / Autonomous Driving</p>
         <p>Portfolio Website</p>
@@ -183,7 +277,8 @@
     <section id="projects">
         <h2>🚀 Projects</h2>
 
-        <!-- 1 -->
+        <!-- 6개의 프로젝트 모두 포함 -->
+
         <div class="project">
             <img src="https://via.placeholder.com/120x80">
             <div class="project-content">
@@ -193,7 +288,6 @@
             </div>
         </div>
 
-        <!-- 2 -->
         <div class="project">
             <img src="https://via.placeholder.com/120x80">
             <div class="project-content">
@@ -203,17 +297,15 @@
             </div>
         </div>
 
-        <!-- 3 -->
         <div class="project">
             <img src="https://via.placeholder.com/120x80">
             <div class="project-content">
                 <h3>📌 3D Furniture Placement Tool</h3>
-                <p>Flask + ngrok + VGGT 기반 3D Reconstruction 및 Plane Alignment Pipeline 개발.</p>
+                <p>Flask + ngrok + VGGT 기반 실내 구조 Reconstruction & Plane Alignment 시스템.</p>
                 <a href="https://github.com/yourname/3d-tool" target="_blank">→ GitHub 보기</a>
             </div>
         </div>
 
-        <!-- 4 -->
         <div class="project">
             <img src="https://via.placeholder.com/120x80">
             <div class="project-content">
@@ -223,17 +315,15 @@
             </div>
         </div>
 
-        <!-- 5 -->
         <div class="project">
             <img src="https://via.placeholder.com/120x80">
             <div class="project-content">
-                <h3>📌 Anti-Spoofing Face Authentication System</h3>
+                <h3>📌 Anti-Spoofing Face Authentication</h3>
                 <p>딥러닝 없이 IR 카메라 기반 실시간 얼굴 인증 프로젝트.</p>
                 <a href="https://github.com/seungmin4987/face_verification_prj_with_IR_cam.git" target="_blank">→ GitHub 보기</a>
             </div>
         </div>
 
-        <!-- 6 -->
         <div class="project">
             <img src="https://via.placeholder.com/120x80">
             <div class="project-content">
