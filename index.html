@@ -47,13 +47,28 @@
             border-radius: 12px;
             margin-bottom: 20px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
         }
 
-        .project h3 {
+        .project img {
+            width: 120px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+
+        .project-content {
+            flex: 1;
+        }
+
+        .project-content h3 {
             margin-top: 0;
         }
 
-        .project a {
+        .project-content a {
             color: #4e8cff;
             text-decoration: none;
             font-weight: bold;
@@ -92,7 +107,7 @@
         <h2>🛠 Skills</h2>
         <ul>
             <li>Python, C++, PyTorch, OpenCV</li>
-            <li>ROS1/ROS2,Planning & Control</li>
+            <li>ROS1/ROS2, Planning & Control</li>
             <li>3D Reconstruction, Depth Estimation</li>
             <li>Docker, Linux, Git</li>
         </ul>
@@ -103,42 +118,59 @@
         <h2>🚀 Projects</h2>
 
         <div class="project">
-            <h3>📌 Monocular Depth Estimation</h3>
-            <p>Lite-Mono 기반 구조에 AdaBins 스타일을 일부 적용해 성능 향상 연구.</p>
-            <a href="https://github.com/yourname/depth-project" target="_blank">→ GitHub 보기</a>
+            <img src="https://via.placeholder.com/120x80" alt="Monocular Depth">
+            <div class="project-content">
+                <h3>📌 Monocular Depth Estimation</h3>
+                <p>Lite-Mono 기반 구조에 AdaBins 스타일을 일부 적용해 성능 향상 연구.</p>
+                <a href="https://github.com/yourname/depth-project" target="_blank">→ GitHub 보기</a>
+            </div>
         </div>
 
         <div class="project">
-            <h3>📌 Autonomous Driving Mission Control</h3>
-            <p>ROS2 기반 GPS Pure-Pursuit + Obstacle Detection + Planning 시스템 개발.</p>
-            <a href="https://github.com/yourname/autodrive" target="_blank">→ GitHub 보기</a>
+            <img src="https://via.placeholder.com/120x80" alt="Mission Control">
+            <div class="project-content">
+                <h3>📌 Autonomous Driving Mission Control</h3>
+                <p>ROS2 기반 GPS Pure-Pursuit + Obstacle Detection + Planning 시스템 개발.</p>
+                <a href="https://github.com/yourname/autodrive" target="_blank">→ GitHub 보기</a>
+            </div>
         </div>
 
         <div class="project">
-            <h3>📌 3D Furniture Placement Tool</h3>
-            <p>Flask + ngrok + VGGT 기반 3D Reconstruction & Plane Alignment Pipeline 개발.</p>
-            <a href="https://github.com/yourname/3d-tool" target="_blank">→ GitHub 보기</a>
+            <img src="https://via.placeholder.com/120x80" alt="3D Furniture">
+            <div class="project-content">
+                <h3>📌 3D Furniture Placement Tool</h3>
+                <p>Flask + ngrok + VGGT 기반 3D Reconstruction & Plane Alignment Pipeline 개발.</p>
+                <a href="https://github.com/yourname/3d-tool" target="_blank">→ GitHub 보기</a>
+            </div>
         </div>
 
         <div class="project">
-            <h3>📌 Pedestrian Tracking System for Safety Using CCTV</h3>
-            <p>A CCTV-based pedestrian safety system developed for the Embedded Software Competition.</p>
-            <a href="https://github.com/seungmin4987/2024ESWContest_mobility_6027.git" target="_blank">→ GitHub 보기</a>
+            <img src="https://via.placeholder.com/120x80" alt="Pedestrian Tracking">
+            <div class="project-content">
+                <h3>📌 Pedestrian Tracking System for Safety Using CCTV</h3>
+                <p>A CCTV-based pedestrian tracking and safety system developed for the Embedded Software Competition.</p>
+                <a href="https://github.com/seungmin4987/2024ESWContest_mobility_6027.git" target="_blank">→ GitHub 보기</a>
+            </div>
         </div>
 
         <div class="project">
-            <h3>📌 Anti-Spoofing Face Authentication System</h3>
-            <p>A simple real-time face authentication toy project without deep learning.</p>
-            <a href="https://github.com/seungmin4987/face_verification_prj_with_IR_cam.git" target="_blank">→ GitHub 보기</a>
+            <img src="https://via.placeholder.com/120x80" alt="Anti Spoofing">
+            <div class="project-content">
+                <h3>📌 Anti-Spoofing Face Authentication System</h3>
+                <p>A simple real-time face authentication project without deep learning.</p>
+                <a href="https://github.com/seungmin4987/face_verification_prj_with_IR_cam.git" target="_blank">→ GitHub 보기</a>
+            </div>
         </div>
         
         <div class="project">
-            <h3>📌 Longitudinal & Lateral Vehicle Control System</h3>
-            <p>A real-time control system that integrates throttle, brake, and steering control 
-       for autonomous driving.</p>
-            <a href="https://github.com/seungmin4987/KAI_control.git" target="_blank">→ GitHub 보기</a>
+            <img src="https://via.placeholder.com/120x80" alt="Vehicle Control">
+            <div class="project-content">
+                <h3>📌 Longitudinal & Lateral Vehicle Control System</h3>
+                <p>A real-time control system that integrates throttle, brake, and steering control for autonomous driving.</p>
+                <a href="https://github.com/seungmin4987/KAI_control.git" target="_blank">→ GitHub 보기</a>
+            </div>
         </div>
-        
+
     </section>
 
     <!-- Awards -->
