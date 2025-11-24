@@ -232,31 +232,50 @@
             }
         }
 
-        /* --- 이미지 팝업 모달 --- */
+        /* --- 이미지 팝업 모달 (여러 장 슬라이드용으로 확장) --- */
         #imgModal {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.8);
+            background: rgba(0,0,0,0.85);
             display: none;
             justify-content: center;
             align-items: center;
-            z-index: 2000;
+            z-index: 3000;
         }
 
         #imgModal img {
             max-width: 90%;
             max-height: 90%;
             border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-            animation: fadeIn 0.3s ease;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.95); }
-            to { opacity: 1; transform: scale(1.0); }
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            font-size: 50px;
+            color: white;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            font-size: 60px;
+            color: white;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .nav-btn.left { left: 40px; }
+        .nav-btn.right { right: 40px; }
+
+        .nav-btn:hover {
+            color: #bbbbbb;
         }
     </style>
 </head>
@@ -328,7 +347,7 @@
     <section id="projects">
         <h2>🚀 Projects</h2>
 
-        <!-- 한 프로젝트 예시 -->
+        <!-- ✔ 여러 장 슬라이드 -->
         <div class="project">
             <img src="images/depth2.png">
             <div class="project-content">
@@ -345,6 +364,7 @@
             </div>
         </div>
 
+        <!-- ✔ 단일 이미지 -->
         <div class="project">
             <img src="images/ad.gif">
             <div class="project-content">
@@ -353,16 +373,17 @@
 
                 <div class="project-buttons">
                     <a href="https://github.com/yourname/autodrive" target="_blank">GitHub</a>
-                    <button onclick="openImg('images/ad_prj.jpg')">자세히 보기</button>
+                    <button onclick="openImgs(['images/ad_prj.jpg'])">자세히 보기</button>
                 </div>
             </div>
         </div>
 
+        <!-- ✔ PDF만 있는 프로젝트 -->
         <div class="project">
             <img src="images/furniture.gif">
             <div class="project-content">
                 <h3>📌 3D Furniture Placement Tool</h3>
-                <p>VGGT 기반 실내 구조 Reconstruction & Plane Alignment 가구 배치 시뮬레이터.</p>
+                <p>VGGT 기반 실내 Reconstruction & Plane Alignment 가구 배치.</p>
 
                 <div class="project-buttons">
                     <a href="https://github.com/yourname/3d-tool" target="_blank">GitHub</a>
@@ -374,12 +395,12 @@
         <div class="project">
             <img src="images/esw.gif">
             <div class="project-content">
-                <h3>📌 Embedded CCTV Pedestrian Tracking & Safety System</h3>
-                <p>임베디드 SW 경진대회 출품 — CCTV 기반 보행자 추적 및 안전 시스템.</p>
+                <h3>📌 Embedded CCTV Pedestrian Tracking</h3>
+                <p>임베디드 기반 보행자 추적 및 안전 시스템.</p>
 
                 <div class="project-buttons">
                     <a href="https://github.com/seungmin4987/2024ESWContest_mobility_6027.git" target="_blank">GitHub</a>
-                    <button onclick="openImg('images/esw_prj.jpg')">자세히 보기</button>
+                    <button onclick="openImgs(['images/esw_prj.jpg'])">자세히 보기</button>
                 </div>
             </div>
         </div>
@@ -388,11 +409,11 @@
             <img src="images/fa.gif">
             <div class="project-content">
                 <h3>📌 Anti-Spoofing Face Authentication</h3>
-                <p>딥러닝 없이 IR 카메라 기반 실시간 얼굴 인증 프로젝트.</p>
+                <p>딥러닝 없이 IR 카메라 기반 인증 시스템.</p>
 
                 <div class="project-buttons">
                     <a href="https://github.com/seungmin4987/face_verification_prj_with_IR_cam.git" target="_blank">GitHub</a>
-                    <button onclick="openImg('images/fa_prj.jpg')">자세히 보기</button>
+                    <button onclick="openImgs(['images/fa_prj.jpg'])">자세히 보기</button>
                 </div>
             </div>
         </div>
@@ -400,12 +421,12 @@
         <div class="project">
             <img src="images/ctl.gif">
             <div class="project-content">
-                <h3>📌 Longitudinal & Lateral Vehicle Control System</h3>
-                <p>자율주행 차량의 가감속·조향 통합 제어기 개발.</p>
+                <h3>📌 Vehicle Control System</h3>
+                <p>가감속·조향 통합 제어기 개발.</p>
 
                 <div class="project-buttons">
                     <a href="https://github.com/seungmin4987/KAI_control.git" target="_blank">GitHub</a>
-                    <button onclick="openImg('images/ctl_prj.jpg')">자세히 보기</button>
+                    <button onclick="openImgs(['images/ctl_prj.jpg'])">자세히 보기</button>
                 </div>
             </div>
         </div>
@@ -427,27 +448,63 @@
     <section id="contact">
         <h2>📩 Contact</h2>
         <p>Email: seungmin4987@naver.com</p>
-        <p>GitHub: <a href="https://github.com/seungmin4987" target="_blank">github.com/seungmin4987</a></p>
+        <p>GitHub:
+            <a href="https://github.com/seungmin4987" target="_blank">
+                github.com/seungmin4987
+            </a>
+        </p>
     </section>
 
     <footer>
         © 2025 seungmin4987. All rights reserved.
     </footer>
 
-    <!-- 이미지 팝업 모달 -->
-    <div id="imgModal" onclick="closeImg()">
+    <!-- ⭐ 이미지 슬라이드 모달 -->
+    <div id="imgModal">
+        <span class="close-btn" onclick="forceClose()">×</span>
+        <span class="nav-btn left" onclick="prevImg(event)">❮</span>
         <img id="imgModalContent">
+        <span class="nav-btn right" onclick="nextImg(event)">❯</span>
     </div>
 
     <script>
-        function openImg(src) {
-            document.getElementById("imgModalContent").src = src;
+        let imgList = [];
+        let currentIndex = 0;
+
+        function openImgs(list) {
+            imgList = list;
+            currentIndex = 0;
+            showImg();
             document.getElementById("imgModal").style.display = "flex";
         }
 
-        function closeImg() {
+        function showImg() {
+            document.getElementById("imgModalContent").src = imgList[currentIndex];
+        }
+
+        function nextImg(event) {
+            event.stopPropagation();
+            currentIndex = (currentIndex + 1) % imgList.length;
+            showImg();
+        }
+
+        function prevImg(event) {
+            event.stopPropagation();
+            currentIndex = (currentIndex - 1 + imgList.length) % imgList.length;
+            showImg();
+        }
+
+        function forceClose() {
             document.getElementById("imgModal").style.display = "none";
         }
+
+        document.addEventListener("keydown", (e) => {
+            if (document.getElementById("imgModal").style.display === "flex") {
+                if (e.key === "ArrowRight") nextImg(e);
+                if (e.key === "ArrowLeft") prevImg(e);
+                if (e.key === "Escape") forceClose();
+            }
+        });
     </script>
 
 </body>
