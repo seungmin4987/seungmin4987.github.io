@@ -93,9 +93,9 @@
         }
 
         .project img {
-            width: 350px;      /* 고정 가로 */
-            height: 250px;     /* 고정 세로 */
-            object-fit: fill; /* 영역 꽉 채우기 */
+            width: 350px;
+            height: 250px;
+            object-fit: fill;
             border-radius: 8px;
         }
 
@@ -109,6 +109,31 @@
             font-weight: bold;
         }
 
+        /* --- 프로젝트 버튼 스타일 --- */
+        .project-buttons {
+            margin-top: 12px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .project-buttons a,
+        .project-buttons button {
+            background: #4e8cff;
+            color: white;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .project-buttons a:hover,
+        .project-buttons button:hover {
+            background: #3a6fd9;
+        }
+
         footer {
             text-align: center;
             padding: 30px;
@@ -118,7 +143,7 @@
         }
 
         /* --------------------------------------------- */
-        /* 📱 모바일 최적화 영역 */
+        /* 📱 모바일 최적화 */
         /* --------------------------------------------- */
 
         @media (max-width: 768px) {
@@ -174,8 +199,6 @@
             }
         }
 
-
-        /* 📱 더 작은 화면 (아이폰 SE 등) */
         @media (max-width: 480px) {
 
             nav a {
@@ -209,6 +232,32 @@
             }
         }
 
+        /* --- 이미지 팝업 모달 --- */
+        #imgModal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        #imgModal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1.0); }
+        }
     </style>
 </head>
 
@@ -279,14 +328,18 @@
     <section id="projects">
         <h2>🚀 Projects</h2>
 
-        <!-- 6개의 프로젝트 모두 포함 -->
-
+        <!-- 한 프로젝트 예시 -->
         <div class="project">
             <img src="images/depth2.png">
             <div class="project-content">
                 <h3>📌 Monocular Depth Estimation</h3>
                 <p>Lite-Mono 기반 구조에 AdaBins 스타일을 부분 적용한 성능 향상 연구.</p>
-                <a href="https://github.com/yourname/depth-project" target="_blank">→ GitHub 보기</a>
+
+                <div class="project-buttons">
+                    <a href="https://github.com/yourname/depth-project" target="_blank">GitHub</a>
+                    <a href="pdf/depth.pdf" target="_blank">PDF</a>
+                    <button onclick="openImg('images/depth2.png')">자세히 보기</button>
+                </div>
             </div>
         </div>
 
@@ -295,7 +348,12 @@
             <div class="project-content">
                 <h3>📌 Autonomous Driving Mission Control</h3>
                 <p>GPS waypoint 추종 + Obstacle Detection + Planning 시스템 개발.</p>
-                <a href="https://github.com/yourname/autodrive" target="_blank">→ GitHub 보기</a>
+
+                <div class="project-buttons">
+                    <a href="https://github.com/yourname/autodrive" target="_blank">GitHub</a>
+                    <a href="pdf/ad.pdf" target="_blank">PDF</a>
+                    <button onclick="openImg('images/ad.gif')">자세히 보기</button>
+                </div>
             </div>
         </div>
 
@@ -304,7 +362,12 @@
             <div class="project-content">
                 <h3>📌 3D Furniture Placement Tool</h3>
                 <p>VGGT 기반 실내 구조 Reconstruction & Plane Alignment 가구 배치 시뮬레이터.</p>
-                <a href="https://github.com/yourname/3d-tool" target="_blank">→ GitHub 보기</a>
+
+                <div class="project-buttons">
+                    <a href="https://github.com/yourname/3d-tool" target="_blank">GitHub</a>
+                    <a href="pdf/furniture.pdf" target="_blank">PDF</a>
+                    <button onclick="openImg('images/furniture.gif')">자세히 보기</button>
+                </div>
             </div>
         </div>
 
@@ -313,7 +376,12 @@
             <div class="project-content">
                 <h3>📌 Embedded CCTV Pedestrian Tracking & Safety System</h3>
                 <p>임베디드 SW 경진대회 출품 — CCTV 기반 보행자 추적 및 안전 시스템.</p>
-                <a href="https://github.com/seungmin4987/2024ESWContest_mobility_6027.git" target="_blank">→ GitHub 보기</a>
+
+                <div class="project-buttons">
+                    <a href="https://github.com/seungmin4987/2024ESWContest_mobility_6027.git" target="_blank">GitHub</a>
+                    <a href="pdf/esw.pdf" target="_blank">PDF</a>
+                    <button onclick="openImg('images/esw.gif')">자세히 보기</button>
+                </div>
             </div>
         </div>
 
@@ -322,7 +390,12 @@
             <div class="project-content">
                 <h3>📌 Anti-Spoofing Face Authentication</h3>
                 <p>딥러닝 없이 IR 카메라 기반 실시간 얼굴 인증 프로젝트.</p>
-                <a href="https://github.com/seungmin4987/face_verification_prj_with_IR_cam.git" target="_blank">→ GitHub 보기</a>
+
+                <div class="project-buttons">
+                    <a href="https://github.com/seungmin4987/face_verification_prj_with_IR_cam.git" target="_blank">GitHub</a>
+                    <a href="pdf/face.pdf" target="_blank">PDF</a>
+                    <button onclick="openImg('images/fa.gif')">자세히 보기</button>
+                </div>
             </div>
         </div>
 
@@ -331,7 +404,12 @@
             <div class="project-content">
                 <h3>📌 Longitudinal & Lateral Vehicle Control System</h3>
                 <p>자율주행 차량의 가감속·조향 통합 제어기 개발.</p>
-                <a href="https://github.com/seungmin4987/KAI_control.git" target="_blank">→ GitHub 보기</a>
+
+                <div class="project-buttons">
+                    <a href="https://github.com/seungmin4987/KAI_control.git" target="_blank">GitHub</a>
+                    <a href="pdf/control.pdf" target="_blank">PDF</a>
+                    <button onclick="openImg('images/ctl.gif')">자세히 보기</button>
+                </div>
             </div>
         </div>
 
@@ -358,6 +436,22 @@
     <footer>
         © 2025 seungmin4987. All rights reserved.
     </footer>
+
+    <!-- 이미지 팝업 모달 -->
+    <div id="imgModal" onclick="closeImg()">
+        <img id="imgModalContent">
+    </div>
+
+    <script>
+        function openImg(src) {
+            document.getElementById("imgModalContent").src = src;
+            document.getElementById("imgModal").style.display = "flex";
+        }
+
+        function closeImg() {
+            document.getElementById("imgModal").style.display = "none";
+        }
+    </script>
 
 </body>
 </html>
