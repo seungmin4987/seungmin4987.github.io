@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Seung Min </title>
+    <title>Portfolio | Seung Min</title>
 
     <style>
         html {
@@ -17,7 +17,7 @@
             color: #333;
         }
 
-        /* 상단 고정 네비게이션 */
+        /* Navigation */
         nav {
             position: fixed;
             top: 0;
@@ -47,7 +47,7 @@
             text-align: center;
         }
 
-        /* 프로필 이미지 */
+        /* Profile */
         .profile-pic {
             width: 280px;
             height: 280px;
@@ -80,7 +80,7 @@
             font-size: 28px;
         }
 
-        /* 프로젝트 카드 */
+        /* Projects */
         .project {
             background: white;
             padding: 20px;
@@ -109,7 +109,6 @@
             font-weight: bold;
         }
 
-        /* --- 프로젝트 버튼 스타일 --- */
         .project-buttons {
             margin-top: 12px;
             display: flex;
@@ -142,97 +141,58 @@
             color: #555;
         }
 
-        /* --------------------------------------------- */
-        /* 📱 모바일 최적화 */
-        /* --------------------------------------------- */
-
+        /* Mobile */
         @media (max-width: 768px) {
-
             nav a {
                 margin: 0 6px;
                 font-size: 14px;
             }
-
             header {
                 padding: 120px 10px 40px 10px;
             }
-
             header h1 {
                 font-size: 32px;
             }
-
             header p {
                 font-size: 16px;
             }
-
             section {
                 margin: 20px auto;
                 padding: 15px;
             }
-
             h2 {
                 font-size: 22px;
                 border-left-width: 4px;
             }
-
             .project {
                 flex-direction: column;
-                align-items: center;
                 text-align: center;
+                align-items: center;
             }
-
             .project img {
                 width: 90%;
                 height: auto;
             }
-
-            .project-content {
-                width: 100%;
-            }
-
-            .project-content h3 {
-                font-size: 20px;
-            }
-
-            .project-content p {
-                font-size: 15px;
-            }
         }
 
         @media (max-width: 480px) {
-
             nav a {
                 margin: 0 4px;
                 font-size: 12px;
             }
-
             .profile-pic {
                 width: 120px;
                 height: 120px;
             }
-
             header h1 {
                 font-size: 28px;
             }
-
             header p {
-                font-size: 14px;
-            }
-
-            h2 {
-                font-size: 20px;
-            }
-
-            .project img {
-                width: 100%;
-            }
-
-            section ul li {
                 font-size: 14px;
             }
         }
 
-        /* --- 이미지 팝업 모달 (여러 장 슬라이드용으로 확장) --- */
+        /* Modal */
         #imgModal {
             position: fixed;
             top: 0;
@@ -259,7 +219,6 @@
             font-size: 50px;
             color: white;
             cursor: pointer;
-            user-select: none;
         }
 
         .nav-btn {
@@ -268,21 +227,15 @@
             font-size: 60px;
             color: white;
             cursor: pointer;
-            user-select: none;
         }
 
         .nav-btn.left { left: 40px; }
         .nav-btn.right { right: 40px; }
-
-        .nav-btn:hover {
-            color: #bbbbbb;
-        }
     </style>
 </head>
 
 <body>
 
-    <!-- 고정 네비게이션 -->
     <nav>
         <a href="#about">About</a>
         <a href="#education">Education</a>
@@ -293,7 +246,6 @@
         <a href="#contact">Contact</a>
     </nav>
 
-    <!-- 헤더 -->
     <header id="home">
         <img class="profile-pic" src="images/profile.jpg" alt="profile">
         <h1>Seungmin Han</h1>
@@ -301,12 +253,12 @@
         <p>Portfolio Website</p>
     </header>
 
-    <!-- About Me -->
+    <!-- About -->
     <section id="about">
         <h2>👋 About Me</h2>
         <p>
-            안녕하세요! 저는 AI·컴퓨터 비전·자율주행 알고리즘을 공부하고 있는 학생입니다.
-            딥러닝 연구와 자율주행 시스템 구현을 중심으로 경험을 쌓아가고 있습니다.
+            Hello! I am a student studying AI, computer vision, and autonomous driving algorithms.
+            I am building experience mainly in deep learning research and autonomous driving system implementation.
         </p>
     </section>
 
@@ -314,8 +266,8 @@
     <section id="education">
         <h2>🎓 Education</h2>
         <ul>
-            <li><b>건국대학교(Konkuk University)</b> – 전기전자공학부 (2020~2025)</li>
-            <li><b>전공:</b> 전기전자공학 </li>
+            <li><b>Konkuk University</b> – Department of Electrical and Electronics Engineering (2020–2025)</li>
+            <li><b>Major:</b> Electrical and Electronics Engineering</li>
             <li><b>GPA:</b> 4.15 / 4.5 (Major: 4.21)</li>
         </ul>
     </section>
@@ -324,11 +276,15 @@
     <section id="experience">
         <h2>💼 Experience</h2>
         <ul>
-            <li><b>건국대 자작 자동차 동아리(KAI)</b> - 자율주행팀 제어 파트장 (2023.11 ~ 2024.11)</li>
-            <li><b>건국대 자작 자동차 동아리(KAI)</b> - 자율주행팀 부팀장 (2024.11 ~ 2025.11)</li>
-            <li><b>제 22회 임베디드 소프트웨어 경진대회</b> - 화이트박스 팀 (2024)</li>
-            <li><b>한양대 IRCV LAB</b> - 학부 인턴 (2025.07 ~ 2025.09)</li>
-            <li><b>KAIST AVE LAB</b> - 학부 인턴 (2025.12 ~)</li>
+            <li><b>Konkuk University Formula-Style Racing Club (KAI)</b> – Autonomous Driving Team, Control Lead (Nov 2023 – Nov 2024)</li>
+
+            <li><b>Konkuk University Formula-Style Racing Club (KAI)</b> – Autonomous Driving Team, Deputy Leader (Nov 2024 – Nov 2025)</li>
+
+            <li><b>22nd Embedded Software Competition</b> – WhiteBox Team (2024)</li>
+
+            <li><b>Hanyang University IRCV Lab</b> – Undergraduate Intern (Jul 2025 – Sep 2025)</li>
+
+            <li><b>KAIST AVE LAB</b> – Undergraduate Intern (Dec 2025 – )</li>
         </ul>
     </section>
 
@@ -347,43 +303,40 @@
     <section id="projects">
         <h2>🚀 Projects</h2>
 
-        <!-- ✔ 여러 장 슬라이드 -->
         <div class="project">
             <img src="images/depth2.png">
             <div class="project-content">
                 <h3>📌 Monocular Depth Estimation</h3>
-                <p>Lite-Mono 기반 구조에 AdaBins 스타일을 부분 적용한 성능 향상 연구.</p>
+                <p>Performance improvement research applying AdaBins-style adaptive binning to a Lite-Mono–based depth estimation network.</p>
 
                 <div class="project-buttons">
                     <a href="https://github.com/yourname/depth-project" target="_blank">GitHub</a>
                     <a href="images/paper.pdf" target="_blank">PDF</a>
                     <button onclick="openImgs(['images/depth_prj1.jpg','images/depth_prj2.jpg','images/depth_prj3.jpg'])">
-                        자세히 보기
+                        View Details
                     </button>
                 </div>
             </div>
         </div>
 
-        <!-- ✔ 단일 이미지 -->
         <div class="project">
             <img src="images/ad.gif">
             <div class="project-content">
                 <h3>📌 Autonomous Driving Mission Control</h3>
-                <p>GPS waypoint 추종 + Obstacle Detection + Planning 시스템 개발.</p>
+                <p>Developed a system combining GPS waypoint following, obstacle detection, and planning.</p>
 
                 <div class="project-buttons">
                     <a href="https://github.com/yourname/autodrive" target="_blank">GitHub</a>
-                    <button onclick="openImgs(['images/ad_prj.jpg'])">자세히 보기</button>
+                    <button onclick="openImgs(['images/ad_prj.jpg'])">View Details</button>
                 </div>
             </div>
         </div>
 
-        <!-- ✔ PDF만 있는 프로젝트 -->
         <div class="project">
             <img src="images/furniture.gif">
             <div class="project-content">
                 <h3>📌 3D Furniture Placement Tool</h3>
-                <p>VGGT 기반 실내 Reconstruction & Plane Alignment 가구 배치.</p>
+                <p>Indoor reconstruction and furniture placement using VGGT-based plane alignment.</p>
 
                 <div class="project-buttons">
                     <a href="https://github.com/yourname/3d-tool" target="_blank">GitHub</a>
@@ -396,11 +349,11 @@
             <img src="images/esw.gif">
             <div class="project-content">
                 <h3>📌 Embedded CCTV Pedestrian Tracking</h3>
-                <p>임베디드 기반 보행자 추적 및 안전 시스템.</p>
+                <p>Embedded pedestrian tracking and safety system.</p>
 
                 <div class="project-buttons">
                     <a href="https://github.com/seungmin4987/2024ESWContest_mobility_6027.git" target="_blank">GitHub</a>
-                    <button onclick="openImgs(['images/esw_prj.jpg'])">자세히 보기</button>
+                    <button onclick="openImgs(['images/esw_prj.jpg'])">View Details</button>
                 </div>
             </div>
         </div>
@@ -409,11 +362,11 @@
             <img src="images/fa.gif">
             <div class="project-content">
                 <h3>📌 Anti-Spoofing Face Authentication</h3>
-                <p>딥러닝 없이 IR 카메라 기반 인증 시스템.</p>
+                <p>IR camera–based face authentication system without deep learning.</p>
 
                 <div class="project-buttons">
                     <a href="https://github.com/seungmin4987/face_verification_prj_with_IR_cam.git" target="_blank">GitHub</a>
-                    <button onclick="openImgs(['images/fa_prj.jpg'])">자세히 보기</button>
+                    <button onclick="openImgs(['images/fa_prj.jpg'])">View Details</button>
                 </div>
             </div>
         </div>
@@ -422,11 +375,11 @@
             <img src="images/ctl.gif">
             <div class="project-content">
                 <h3>📌 Vehicle Control System</h3>
-                <p>가감속·조향 통합 제어기 개발.</p>
+                <p>Developed an integrated controller for acceleration, braking, and steering.</p>
 
                 <div class="project-buttons">
                     <a href="https://github.com/seungmin4987/KAI_control.git" target="_blank">GitHub</a>
-                    <button onclick="openImgs(['images/ctl_prj.jpg'])">자세히 보기</button>
+                    <button onclick="openImgs(['images/ctl_prj.jpg'])">View Details</button>
                 </div>
             </div>
         </div>
@@ -437,10 +390,15 @@
     <section id="awards">
         <h2>🏆 Awards</h2>
         <ul>
-            <li>우수상 – 임베디드 소프트웨어 경진대회 (2024)</li>
-            <li>금상 – 건국대학교 창의설계경진대회 (2024)</li>
-            <li>우수상 – 대학생 창작 모빌리티 경진대회 (2025)</li>
-            <li>노력상 – 국제 EV 자율주행 경진대회 (2025)</li>
+            <li>2nd Place – Konkuk University Capstone Design Competition (2024)</li>
+
+            <li>2nd Place – The World Embedded Software Contest (2024)</li>
+
+            <li>1st Place (out of 21 teams) – Student Creative Mobility Competition, Creative Technology Division (2025)</li>
+
+            <li>5th Place (out of 21 teams) – Student Creative Mobility Competition, Autonomous Driving Performance Division (2025)</li>
+
+            <li>5th Place (out of 23 teams) – International EV Autonomous Driving Challenge (2025)</li>
         </ul>
     </section>
 
@@ -459,7 +417,7 @@
         © 2025 seungmin4987. All rights reserved.
     </footer>
 
-    <!-- ⭐ 이미지 슬라이드 모달 -->
+    <!-- Image Modal -->
     <div id="imgModal">
         <span class="close-btn" onclick="forceClose()">×</span>
         <span class="nav-btn left" onclick="prevImg(event)">❮</span>
